@@ -563,6 +563,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 8404117837236362439}
     m_Modifications:
     - target: {fileID: 4666461838903775964, guid: b6da16eda99d1594fb24d96186c90763, type: 3}
@@ -614,6 +615,7 @@ PrefabInstance:
       value: Eyes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b6da16eda99d1594fb24d96186c90763, type: 3}
 --- !u!4 &1487033881339974715 stripped
 Transform:
@@ -625,6 +627,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 2190601096316689988}
     m_Modifications:
     - target: {fileID: 1796174943860560393, guid: bcbac7990611c944ab22a7f2593934c0, type: 3}
@@ -633,7 +636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796174943860560393, guid: bcbac7990611c944ab22a7f2593934c0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8434945037557132949, guid: bcbac7990611c944ab22a7f2593934c0, type: 3}
       propertyPath: m_RootOrder
@@ -680,6 +683,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: bcbac7990611c944ab22a7f2593934c0, type: 3}
 --- !u!4 &1259530567251222035 stripped
 Transform:
