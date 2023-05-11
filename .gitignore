@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Ignore packages for now
 /[Pp]ackages/
+
+# Ignore personal links
+*.lnk
