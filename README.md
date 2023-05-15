@@ -3,3 +3,4 @@ University VR/AR project that I might expand on. Title is an awkward way of comb
 
 Packages are not included. You will need to download:
 - Vuforia (latest version)
+- TextMeshPro (may automatically download)
