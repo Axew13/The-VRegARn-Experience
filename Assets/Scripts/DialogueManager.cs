@@ -2,7 +2,8 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using System;
-using System.IO;
+//using System.IO;
+using System.Text.RegularExpressions;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -22,22 +23,38 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
-            using (StreamReader file = new StreamReader("Text/" + textFile + ".txt"))
-            {
-                int counter = 0;
-                string ln;
+/*          
+ *          // Old functionality which doesn't work in build
+ *          
+ *          using (StreamReader file = new StreamReader("Text/" + textFile + ".txt"))
+ *          {
+ *              int counter = 0;
+ *              string ln;
+ *
+ *              while ((ln = file.ReadLine()) != null)
+ *              {
+ *                  cache.Add(ln);
+ *                  counter++;
+ *              }
+ *              file.Close();
+ *          }
+ */
+            
+            // New functionality which works on build including APKs
 
-                while ((ln = file.ReadLine()) != null)
-                {
-                    cache.Add(ln);
-                    counter++;
-                }
-                file.Close();
+            TextAsset textFileObject = Resources.Load(textFile) as TextAsset;
+
+            string fs = textFileObject.text;
+            string[] lines = Regex.Split(fs, "\r\n|\n|\r");
+
+            for (int lnNo = 0; lnNo < lines.Length; lnNo++)
+            {
+                cache.Add(lines[lnNo]);
             }
         }
             catch (Exception ex)
         {
-            // Just in case things don't work in a build
+            // Just in case things still don't work
             cache.Add("Error: " + ex.Message);
         }
     }
