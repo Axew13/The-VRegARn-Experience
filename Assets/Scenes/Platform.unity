@@ -1009,6 +1009,8 @@ GameObject:
   - component: {fileID: 318466578}
   - component: {fileID: 318466580}
   - component: {fileID: 318466581}
+  - component: {fileID: 318466582}
+  - component: {fileID: 318466583}
   m_Layer: 0
   m_Name: SceneScripts
   m_TagString: Untagged
@@ -1070,6 +1072,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bc7f16a23ae054d8a19fa05efd35e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &318466582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318466577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d0abbd0dafb914fae9a3a9a791dc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowInteracted: 0
+  wheatInteracted: 0
+  factoryEntered: 0
+  buttonPressed: 0
+--- !u!114 &318466583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318466577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c66648ef1e2984ab7bdffc0cb7a573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAudio: {fileID: 0}
+  defaultAudioLoop: 0
 --- !u!1001 &318485235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1248,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 2
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -1295,14 +1327,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: A4-ObjectScanningTarget
+  mTrackableName: 
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 0.70703125
+  mAspectRatio: 1
   mImageTargetType: 3
-  mWidth: 0.297
-  mHeight: 0.20998828
-  mRuntimeTexture: {fileID: 2800000, guid: af4d590bf40684242892132a7e20cea3, type: 3}
+  mWidth: 0.2
+  mHeight: 0.2
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1321,7 +1353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 402559498}
   mHiddenRoot: {fileID: 0}
-  mTargetName: A4-ObjectScanningTarget
+  mTargetName: 
   mDatasetName: 
   mCastedBehaviour: {fileID: 402559498}
   mMeshFilter: {fileID: 0}
@@ -1383,7 +1415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1525951421453288702, guid: e80fb6955c64ad946a9f166028c15b71, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2190601096316689988, guid: e80fb6955c64ad946a9f166028c15b71, type: 3}
       propertyPath: m_RootOrder
@@ -4399,7 +4431,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894982147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
   m_Name: 

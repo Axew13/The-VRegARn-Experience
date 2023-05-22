@@ -2,10 +2,10 @@ You selected a cow. What a beautiful creature!
 By the way, did you know cows don't naturally produce milk?
 They have to be forcibly impregnated and were selectively bred to produce the quantities of milk we consume in our daily lives.
 Okay, moving on...
-%methane
+%methane_appear
 Cows are great and all, but they produce a lot of methane gas.
 This methane gas plays a part in the erosion of the ozone layer, contributing to climate change.
 However, if we were to phase out the breeding of cows for farming, and switch to plant-based products...
-%cowsdisappear
+%cows_disappear
 Oh, look! We would even have more room for crop farms!
-Why don't you rotate around the scene and press the crops?
+Why don't you rotate around the scene and check out those crops?

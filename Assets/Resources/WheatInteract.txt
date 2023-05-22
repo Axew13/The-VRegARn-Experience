@@ -1,6 +1,7 @@
 Let's fill this whole area with crops!
+%wheat_fill
 Remember, cows and other animals don't just eat grass! They consume crops as well.
 It seems a little bit inefficient to use those crops to raise animals for years, to eat, when you can just eat the crops instead!
 And thanks to synthesized vitamins, humans can live on a perfectly healthy, plant-based diet!
-I'd like to show you something else now, so please tap anywhere on the scene.
-%factorytap
+%factory_appear
+I'd like to show you something else now, so please tap the factory which has just appeared.

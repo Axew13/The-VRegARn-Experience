@@ -7,5 +7,7 @@ public class Cow : Raycastable
         dm.ClosePrompt(true);
         dm.CacheDialogueFromFile("CowInteract");
         dm.NextPrompt();
+
+        GetStateManager().cowInteracted = true;
     }
 }

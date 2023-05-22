@@ -16,4 +16,10 @@ public class Raycastable : MonoBehaviour
         return GameObject.Find("SceneScripts").GetComponent<DialogueManager>();
     }
 
+    // Same goes for this
+    public GameStateManager GetStateManager()
+    {
+        return GameObject.Find("SceneScripts").GetComponent<GameStateManager>();
+    }
+
 }
