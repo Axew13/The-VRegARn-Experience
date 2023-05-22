@@ -19,5 +19,5 @@ Packages are not included. You will need to download:
 - [ ] Have a way to manage scene scripts from `Raycastable` objects without `GameObject.Find()`ing them.
 
 ## Credits
-[GreaseMonkey - Rinse](https://soundcloud.com/iamgreaser/fromage-rinse?in=iamgreaser/sets/fromage-ost) - Licensed under CC BY-SA 3.0
-[GreaseMonkey - Lather](https://soundcloud.com/iamgreaser/lather-fromage-ost?in=iamgreaser/sets/fromage-ost) - Licensed under CC BY-SA 3.0
+- :musical_note: [GreaseMonkey - Rinse](https://soundcloud.com/iamgreaser/fromage-rinse) - Licensed under CC BY-SA 3.0
+- :musical_note: [GreaseMonkey - Lather](https://soundcloud.com/iamgreaser/lather-fromage-ost) - Licensed under CC BY-SA 3.0

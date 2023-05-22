@@ -7,6 +7,8 @@ using System.Text.RegularExpressions;
 
 public class DialogueManager : MonoBehaviour
 {
+    public DialogueEventManager dialogueEventManager;
+    
     public GameObject prompt;
     public TextMeshProUGUI textMesh;
     // Bad and not scalable, but will do with the time constraints
@@ -44,11 +46,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    // Run special code based on the content of lines
-    public void runEvent (string percentEvent) {
-
-    }
-
     // Display stored lines on-screen
     public void NextPrompt ()
     {
@@ -65,7 +62,11 @@ public class DialogueManager : MonoBehaviour
             if (ln.StartsWith("%"))
             {
                 // If next line is an event to run, run it and skip to the next line
-                runEvent(ln);
+                string eventName = ln.Substring(1, ln.Length);
+                Debug.Log(eventName);
+
+                dialogueEventManager.Interpret(eventName);
+                
                 NextPrompt();
             }
                 else
