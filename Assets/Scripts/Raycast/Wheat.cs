@@ -12,7 +12,8 @@ public class Wheat : Raycastable
             dm.CacheDialogueFromFile("WheatInteract");
 
             sm.wheatInteracted = true;
-        } else
+        }
+            else
         {
             dm.CacheDialogueFromFile("WheatInteractEarly");
         }
