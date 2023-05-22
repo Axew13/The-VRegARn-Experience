@@ -9,37 +9,22 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject prompt;
     public TextMeshProUGUI textMesh;
+    // Bad and not scalable, but will do with the time constraints
+    public Popup popup;
 
     private ArrayList cache = new ArrayList();
 
     // Store an individual line. Pretty annoying to add multiple lines with
-    public void cacheDialogue (string text)
+    public void CacheDialogue (string text)
     {
         cache.Add(text);
     }
 
     // Search for lines from txt files in a "Text" folder and store them
-    public void cacheDialogueFromFile(string textFile)
+    public void CacheDialogueFromFile (string textFile)
     {
         try
         {
-/*          
- *          // Old functionality which doesn't work in build
- *          
- *          using (StreamReader file = new StreamReader("Text/" + textFile + ".txt"))
- *          {
- *              int counter = 0;
- *              string ln;
- *
- *              while ((ln = file.ReadLine()) != null)
- *              {
- *                  cache.Add(ln);
- *                  counter++;
- *              }
- *              file.Close();
- *          }
- */
-            
             // New functionality which works on build including APKs
 
             TextAsset textFileObject = Resources.Load(textFile) as TextAsset;
@@ -65,12 +50,12 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Display stored lines on-screen
-    public void nextPrompt ()
+    public void NextPrompt ()
     {
         if ( cache.Count == 0)
         {
             // If cache of lines is empty, close the dialogue box
-            closePrompt(false);
+            ClosePrompt(false);
         }
             else
         {
@@ -81,7 +66,7 @@ public class DialogueManager : MonoBehaviour
             {
                 // If next line is an event to run, run it and skip to the next line
                 runEvent(ln);
-                nextPrompt();
+                NextPrompt();
             }
                 else
             {
@@ -97,8 +82,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Close the dialogue box. Not necessary to run unless you want to interrupt stored lines. The current line will be erased
-    public void closePrompt(bool eraseCache)
+    public void ClosePrompt(bool eraseCache)
     {
+        // Putting this here for total convenience sake. Given more time to work on this, popup and dialogue management should be moved into the same class
+        popup.ClosePopup();
+
         if (eraseCache)
         {
             cache = new ArrayList();
