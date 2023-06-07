@@ -7,12 +7,23 @@ public class DialogueEventManager : MonoBehaviour
     public GameObject cowContainer;
     public GameObject cowFieldContainer;
     public GameObject cropFieldContainer;
+    public GameObject factoryObject;
+    public GameObject outsideScene;
+    public GameObject factoryScene;
+    public GameObject transformer;
 
     public void Interpret (string eventName)
     {
+        Debug.Log(eventName);
+
         if (eventName.Equals("methane_appear"))
         {
-            //List<GameObject> cows = cowContainer.
+            Cow[] cows = cowContainer.GetComponentsInChildren<Cow>();
+
+            foreach (Cow c in cows)
+            {
+                c.methane.SetActive(true);
+            }
         }
         else if (eventName.Equals("cows_disappear"))
         {
@@ -25,7 +36,7 @@ public class DialogueEventManager : MonoBehaviour
         }
         else if (eventName.Equals("factory_appear"))
         {
-            
+            Appear(factoryObject);
         }
         else
         {
@@ -36,12 +47,33 @@ public class DialogueEventManager : MonoBehaviour
     public void Appear(GameObject obj)
     {
         // You can do a fancier fade animation here or play a sound
-        this.enabled = true;
+        Debug.Log("Made " + obj.name + "appear");
+        obj.SetActive(true);
     }
 
     public void Disappear (GameObject obj)
     {
         // You can do a fancier fade animation here or play a sound
-        this.enabled = false;
+        Debug.Log("Made " + obj.name + "disappear");
+        obj.SetActive(false);
+    }
+
+    public void swapScenes ()
+    {
+        Animator a = transformer.GetComponent<Animator>();
+        a.Play("Shrink");
+
+        Transformer tfScript = transformer.GetComponent<Transformer>();
+
+        while (tfScript.animating)
+        {
+            // hold
+        }
+
+        outsideScene.SetActive(false);
+
+        factoryScene.SetActive(true);
+
+        a.Play("Enlarge");
     }
 }

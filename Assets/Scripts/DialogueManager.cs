@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
             if (ln.StartsWith("%"))
             {
                 // If next line is an event to run, run it and skip to the next line
-                string eventName = ln.Substring(1, ln.Length);
+                string eventName = ln.Substring(1, (ln.Length - 1));
                 Debug.Log(eventName);
 
                 dialogueEventManager.Interpret(eventName);

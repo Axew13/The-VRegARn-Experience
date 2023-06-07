@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Cow : Raycastable
 {
+
+    public GameObject methane;
+
     public override void Interact()
     {
         GameStateManager sm = GetStateManager();
