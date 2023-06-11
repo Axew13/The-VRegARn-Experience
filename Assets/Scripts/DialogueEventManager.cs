@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DialogueEventManager : MonoBehaviour
 {
+    // These are just for the runSceneAppeared method, it should probably be decided what class interacts with both of these on a regular basis
+    public GameStateManager gsm;
+    public DialogueManager dm;
+
     public GameObject cowContainer;
     public GameObject cowFieldContainer;
     public GameObject cropFieldContainer;
@@ -75,5 +79,17 @@ public class DialogueEventManager : MonoBehaviour
         factoryScene.SetActive(true);
 
         a.Play("Enlarge");
+    }
+
+    public void runSceneAppeared()
+    {
+        if (!gsm.sceneAppeared)
+        {
+            dm.ClosePrompt(true);
+            dm.CacheDialogueFromFile("OnSceneAppear");
+            dm.NextPrompt();
+
+            gsm.sceneAppeared = true;
+        }
     }
 }

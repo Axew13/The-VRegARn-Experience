@@ -12,4 +12,6 @@ public class GameStateManager : MonoBehaviour
     public bool factoryEntered;
 
     public bool buttonPressed;
+
+    public bool sceneAppeared;
 }
