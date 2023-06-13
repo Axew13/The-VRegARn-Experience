@@ -2,4 +2,5 @@ Ah yes, there it is! A scene of cows grazing happily in a field.
 Quite idyllic and unrealistic, actually - farmed cows are usually kept inside in spaces where they can't move.
 But to measure the environmental impact, let's run with this scenario where unethical practices aren't in play.
 This way, we can explore the environmental impact of animal farming in general, regardless of specific practises.
+%ready_to_interact
 Now, why don't you get a little closer to the scene, and interact with one of those cows?

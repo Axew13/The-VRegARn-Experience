@@ -4,20 +4,26 @@ public class Wheat : Raycastable
     {
         DialogueManager dm = GetDialogueManager();
         GameStateManager sm = GetStateManager();
-
-        dm.ClosePrompt(true);
         
-        if (sm.cowInteracted)
+        if (sm.readyToInteract)
         {
-            dm.CacheDialogueFromFile("WheatInteract");
+            if (!sm.wheatInteracted)
+            {
+                dm.ClosePrompt(true);
 
-            sm.wheatInteracted = true;
-        }
-            else
-        {
-            dm.CacheDialogueFromFile("WheatInteractEarly");
-        }
+                if (sm.cowInteracted)
+                {
+                    dm.CacheDialogueFromFile("WheatInteract");
 
-        dm.NextPrompt();
+                    sm.wheatInteracted = true;
+                }
+                else
+                {
+                    dm.CacheDialogueFromFile("WheatInteractEarly");
+                }
+
+                dm.NextPrompt();
+            }
+        }
     }
 }

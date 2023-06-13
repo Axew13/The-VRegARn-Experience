@@ -8,18 +8,21 @@ public class Cow : Raycastable
     public override void Interact()
     {
         GameStateManager sm = GetStateManager();
-        if (!sm.cowInteracted)
+        if (sm.readyToInteract)
         {
-            DialogueManager dm = GetDialogueManager();
+            if (!sm.cowInteracted)
+            {
+                DialogueManager dm = GetDialogueManager();
 
-            dm.ClosePrompt(true);
-            dm.CacheDialogueFromFile("CowInteract");
-            dm.NextPrompt();
+                dm.ClosePrompt(true);
+                dm.CacheDialogueFromFile("CowInteract");
+                dm.NextPrompt();
 
-            sm.cowInteracted = true;
+                sm.cowInteracted = true;
 
-/*          // This would disable it for the selected cow. Find a way to do it for all cows.
-            this.gameObject.GetComponent<Collider>().enabled = false;*/
+                /*          // This would disable it for the selected cow. Find a way to do it for all cows.
+                            this.gameObject.GetComponent<Collider>().enabled = false;*/
+            }
         }
     }
 }

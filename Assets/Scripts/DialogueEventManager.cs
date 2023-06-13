@@ -8,6 +8,8 @@ public class DialogueEventManager : MonoBehaviour
     public GameStateManager gsm;
     public DialogueManager dm;
 
+    public SceneChanger sc;
+
     public GameObject cowContainer;
     public GameObject cowFieldContainer;
     public GameObject cropFieldContainer;
@@ -42,6 +44,14 @@ public class DialogueEventManager : MonoBehaviour
         {
             Appear(factoryObject);
         }
+        else if (eventName.Equals("return_to_menu"))
+        {
+            sc.changeScene(0);
+        }
+        else if (eventName.Equals("ready_to_interact"))
+        {
+            gsm.readyToInteract = true;
+        }
         else
         {
             Debug.Log("There is no functionality for the dialogue event \"" + eventName + ".\"");
@@ -64,8 +74,12 @@ public class DialogueEventManager : MonoBehaviour
 
     public void swapScenes ()
     {
-        Animator a = transformer.GetComponent<Animator>();
-        a.Play("Shrink");
+/*
+ *      // Unused due to issues, re-add later
+ *      
+ *      Animator a = transformer.GetComponent<Animator>();
+ *      a.Play("Shrink");
+ */
 
         Transformer tfScript = transformer.GetComponent<Transformer>();
 
@@ -78,7 +92,9 @@ public class DialogueEventManager : MonoBehaviour
 
         factoryScene.SetActive(true);
 
-        a.Play("Enlarge");
+/*
+ *      a.Play("Enlarge");
+ */
     }
 
     public void runSceneAppeared()

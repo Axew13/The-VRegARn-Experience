@@ -14,4 +14,6 @@ public class GameStateManager : MonoBehaviour
     public bool buttonPressed;
 
     public bool sceneAppeared;
+
+    public bool readyToInteract;
 }

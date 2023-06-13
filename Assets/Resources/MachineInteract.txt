@@ -1,6 +1,7 @@
 The factory is now producing tofu and oat milk! This is much more sustainable.
-By the way, did you know that while cow's milk only lasts about a week, oat milk can last years? It doesn't even need to be refridgerated!
+By the way, did you know that while cow's milk only lasts about a week, oat milk can last years? It doesn't even need to be refridgerated until it's opened!
+This not only is good for the consumer, but also means that less milk goes to waste. Think of all those poor cows whose milk expired!
 You can make your own oat milk - but commercial oat milk is enriched with Vitamin D - and also Vitamin B12, which you would normally get from beef.
 Well, that's everything I have to teach you for now. Goodbye!
 Oh, and if you're done with the AR Paper, remember to recycle it!
-%returntomenu
+%return_to_menu
